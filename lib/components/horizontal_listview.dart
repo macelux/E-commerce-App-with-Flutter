@@ -23,6 +23,11 @@ class HorizontalList extends StatelessWidget {
             imageLocation: "images/jean1.jpeg",
             imageCaption: "Jean",
           ),
+
+          Category(
+            imageLocation: "images/tshirt3.jpeg",
+            imageCaption: "Jean",
+          ),
  
  
         ],

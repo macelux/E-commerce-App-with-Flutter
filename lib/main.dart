@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 
 // My Own Import
 import 'package:first_flutter_app/components/horizontal_listview.dart';
+import 'package:first_flutter_app/components/product.dart';
 
 void main() {
   runApp(new MaterialApp(
+    title: "B's Application",
     debugShowCheckedModeBanner: false,
     home: HomePage(),
   ));
@@ -22,8 +24,7 @@ class _HomePageState extends State<HomePage> {
     Widget imageCarousel = new Container(
       height: 200.0,
       child: new Carousel( 
-        images: [
-          AssetImage('images/bp1.png'),
+        images: [ 
           AssetImage('images/bp2.png'),
           AssetImage('images/d1.png'), 
           AssetImage('images/f.png')
@@ -138,6 +139,11 @@ class _HomePageState extends State<HomePage> {
            // padding section
           new Padding(padding: const EdgeInsets.all(20.0), child: new Text("Recent Uploads"),), 
 
+          // grid View
+          Container(
+            height: 120.0,
+            child: Products(),
+          )
         ], 
       ),
     );
