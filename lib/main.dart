@@ -29,7 +29,9 @@ class _HomePageState extends State<HomePage> {
           AssetImage('images/d1.png'), 
           AssetImage('images/f.png')
         ],
-        boxFit: BoxFit.cover
+        boxFit: BoxFit.cover, 
+        autoplay: false,
+        dotBgColor: Colors.transparent,
       ),
     );
 
@@ -65,7 +67,7 @@ class _HomePageState extends State<HomePage> {
             InkWell(
               child: new ListTile(
                 title: Text('Home'),
-                leading: Icon(Icons.home),
+                leading: Icon(Icons.home,  color: Colors.purple),
               ),
               onTap: () {},
             ), 
@@ -73,7 +75,7 @@ class _HomePageState extends State<HomePage> {
             InkWell(
               child: new ListTile(
                 title: Text('My Account'),
-                leading: Icon(Icons.person),
+                leading: Icon(Icons.person, color: Colors.purple),
               ),
               onTap: () {},
             ),
@@ -81,15 +83,15 @@ class _HomePageState extends State<HomePage> {
             InkWell(
               child: new ListTile(
                 title: Text('My Orders'),
-                leading: Icon(Icons.shopping_basket),
+                leading: Icon(Icons.shopping_basket,  color: Colors.purple),
               ),
               onTap: () {},
             ),
 
             InkWell(
               child: new ListTile(
-                title: Text('Categories'),
-                leading: Icon(Icons.category),
+                title: Text('Shopping Cart'),
+                leading: Icon(Icons.category, color: Colors.purple,),
               ),
               onTap: () {},
             ),
@@ -97,7 +99,7 @@ class _HomePageState extends State<HomePage> {
             InkWell(
               child: new ListTile(
                 title: Text('Favourite'),
-                leading: Icon(Icons.favorite),
+                leading: Icon(Icons.favorite, color: Colors.purple),
               ),
               onTap: () {},
             ),
@@ -137,11 +139,11 @@ class _HomePageState extends State<HomePage> {
           HorizontalList(),
 
            // padding section
-          new Padding(padding: const EdgeInsets.all(20.0), child: new Text("Recent Uploads"),), 
+          new Padding(padding: const EdgeInsets.all(10.6), child: new Text("Recent Products"),), 
 
           // grid View
           Container(
-            height: 120.0,
+            height: 280.0,
             child: Products(),
           )
         ], 
